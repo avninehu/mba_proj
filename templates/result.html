@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Material Quantity and Embodied Carbon Estimator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .input-section, .calculations {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .input-section p, .calculations p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Material Quantity and Embodied Carbon Estimator</h1>
+    <div class="input-section">
+        <p>GSF: {{ gsf }}</p>
+        <p>levels: {{ levels }}</p>
+    </div>
+    <div class="calculations">
+        <h2>Calculations</h2>
+        <p>Predicted Steel quantity: {{ steel_prediction }} MT</p>
+        <p>Predicted Global Warming (Steel): {{ global_warming_steel }} kg CO2 equiv/FU</p>
+        <p>Predicted NR Energy (Steel): {{ nr_energy_steel }} MJ/FU</p>
+        <p>Predicted Water Consumption (Steel): {{ water_cons_steel }} m3/FU</p>
+        <p>Predicted Waste Steel: {{ waste_steel }} kg/FU</p>
+        <br>
+        <p>Predicted Concrete quantity: {{ concrete_prediction }} cft</p>
+        <p>Predicted Global Warming (Concrete): {{ global_warming_concrete }} kg CO2 equiv/FU</p>
+        <p>Predicted NR Energy (Concrete): {{ nr_energy_concrete }} MJ/FU</p>
+        <p>Predicted Water Consumption (Concrete): {{ water_cons_concrete }} m3/FU</p>
+        <p>Predicted Waste Steel: {{ waste_concrete }} kg/FU</p>
+    </div>
+</body>
+</html>

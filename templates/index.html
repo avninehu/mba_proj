@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Material Quantity and Embodied Carbon Estimator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            background-color: #D1E9F1; /* Light blue color */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4285f4; /* Blue color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button {width: 25%;}
+    </style>
+</head>
+<body>
+    <h1>Material Quantity and Embodied Carbon Estimator</h1>
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <label for="gsf">GSF</label><br>
+        <input type="text" id="gsf" name="gsf" placeholder="Enter the GSF value" required><br>
+        <label for="levels">levels</label><br>
+        <input type="number" id="levels" name="levels" placeholder="Enter the number of levels" required><br>
+        <button type="submit">CALCULATE</button>
+    </form>
+</body>
+</html>
